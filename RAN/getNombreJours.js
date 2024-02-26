@@ -43,16 +43,15 @@ function nombreDeJours(mois, annee) {
 }
 
 function programmePrincipal() {
-  let inputMois = prompt('Saisir un numéro de mois')
-  let mois = parseInt(inputMois)
+  let mois = 0
   while (mois < 1 || mois > 12) {
-    inputMois = prompt('Saisir un numéro de mois')
+    let inputMois = prompt('Saisir un numéro de mois')
     mois = parseInt(inputMois)
   }
-  let inputAnnee = prompt('Saisir une annee')
-  let annee = parseInt(inputAnnee)
+
+  let annee = 0
   while (annee < 1588 || annee > 2023) {
-    inputAnnee = prompt('Saisir une annee, entre 1588 et 2023')
+    let inputAnnee = prompt('Saisir une annee, entre 1588 et 2023')
     annee = parseInt(inputAnnee)
   }
   const jours = nombreDeJours(mois, annee)
