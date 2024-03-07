@@ -1,0 +1,150 @@
+/* code */
+code {
+	color: #111;
+	font-family: sans-serif;
+}
+
+article {
+	line-height: 2;
+}
+
+.small {
+	width: 200px;
+	background-color: #ccc;
+}
+
+/* font size */
+.font-size-medium {
+	font-size: medium;
+}
+.font-size-large {
+	font-size: large;
+}
+.font-size-px {
+	font-size: 14px;
+}
+.font-size-pt {
+	font-size: 14pt;
+}
+.font-size-pourcent {
+	font-size: 150%;
+}
+.font-size-em {
+	font-size: 1.5em;
+}
+.font-size-rem {
+	font-size: 1.5rem;
+}
+
+/* font weight */
+.font-weight-bold {
+	font-weight: bold;
+}
+.font-weight-normal {
+	font-weight: normal;
+}
+.font-weight-700 {
+	font-weight: 700;
+}
+.font-weight-bolder {
+	font-weight: bolder;
+}
+.font-weight-lighter {
+	font-weight: lighter;
+}
+
+/* font style */
+.font-style-italic {
+	font-style: italic;
+}
+.font-style-normal {
+	font-style: normal;
+}
+
+/* line-height */
+.line-height-1 {
+	line-height: 1;
+}
+.line-height-15 {
+	line-height: 1.5;
+}
+.line-height-4 {
+	line-height: 4;
+}
+
+/* letter-spacing */
+.letter-spacing {
+	letter-spacing: 0.5em;
+}
+
+/* word-spacing */
+.word-spacing-2 {
+	word-spacing: 2em;
+}
+
+/* white-space */
+.white-space-normal {
+	white-space: normal;
+}
+.white-space-nowrap {
+	white-space: nowrap;
+}
+.white-space-pre {
+	white-space: pre;
+}
+
+/* text-align */
+.text-align-left {
+	text-align: left;
+}
+.text-align-right {
+	text-align: right;
+}
+.text-align-center {
+	text-align: center;
+}
+.text-align-justify {
+	text-align: justify;
+}
+
+/* text-indent */
+.text-indent {
+	text-indent: 6em;
+}
+
+/* text-transform */
+.text-transform-none {
+	text-transform: none;
+}
+.text-transform-capitalize {
+	text-transform: capitalize;
+}
+.text-transform-uppercase {
+	text-transform: uppercase;
+}
+.text-transform-lowercase {
+	text-transform: lowercase;
+}
+
+/* text-decoration */
+.text-decoration-underline {
+	text-decoration: underline;
+}
+.text-decoration-none {
+	text-decoration: none;
+}
+.text-decoration-overline {
+	text-decoration: overline;
+}
+.text-decoration-color {
+	text-decoration: underline red;
+}
+.text-decoration-double {
+	text-decoration: underline double orangered;
+}
+.text-decoration-dashed {
+	text-decoration: underline dashed green;
+}
+.text-decoration-wavy {
+	text-decoration: underline wavy teal;
+}
