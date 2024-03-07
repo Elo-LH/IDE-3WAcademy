@@ -1,0 +1,59 @@
+/******************************************************************************/
+/*                               GENERALITES                                  */
+/******************************************************************************/
+html {
+    font-size: 62.5%;/* Ramène à 10px la police par défaut pour les calculs de rem */
+}
+
+body {
+    font-size: 16px;/* Ramène à la taille de police par défaut */
+    font-family: sans-serif;
+    color: #555;
+    background-color: #eee;
+}
+
+h1 {
+    font-size: 4rem;
+    color: #DD5735;
+}
+
+h2 {
+    font-size: 3.2rem;
+    color: #333;
+}
+
+h3 {
+    font-size: 2.4rem;
+}
+
+a {
+    text-decoration: none;
+    color: #DD5735;
+}
+
+/******************************************************************************/
+/*                                 LAYOUT                                     */
+/******************************************************************************/
+.header {
+    text-align: center;
+    background-color: #ddd;
+    border: 1px solid #DD5735;
+}
+
+.footer {
+    text-align: center;
+    background-color: #ddd;
+    border: 1px solid #555;
+}
+
+.license img {
+    background-color: black;
+    padding: 15px;
+}
+
+/******************************************************************************/
+/*                                 VARIOUS                                    */
+/******************************************************************************/
+.parent {
+    border: 1px dashed #DD5735;
+}
