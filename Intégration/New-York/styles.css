@@ -1,3 +1,74 @@
+/* Font: Courgette */
+@font-face {
+  font-family: 'Courgette';
+  src: url(./ressources/Courgette-Regular.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .container {
-  width: 980px;
+  max-width: 980px;
+  margin-inline: auto;
+}
+html {
+  font-family: 'Source Sans 3';
+  font-size: 10px;
+  --txt-color: #444;
+  --dark-blue: #003884;
+  --medium-blue: #4f89b9;
+  --quote-background: #d7e1ef;
+  color: #444;
+}
+body {
+  font-size: 1.8rem;
+}
+h1,
+h2,
+h3 {
+  font-family: 'Courgette';
+  text-align: center;
+}
+h1 {
+  font-size: 4rem;
+  color: var(--dark-blue);
+}
+h2 {
+  font-size: 3.5rem;
+  color: var(--medium-blue);
+}
+h3 {
+  font-size: 2.5rem;
+  color: var(--dark-blue);
+}
+blockquote {
+  background-color: var(--quote-background);
+  font-family: 'Courgette';
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--dark-blue);
+}
+cite {
+  font-style: normal;
+  font-size: 2rem;
+}
+.copyright {
+  font-size: 1.4rem;
+}
+em,
+strong {
+  color: var(--dark-blue);
+}
+nav ol li a {
+  text-decoration: none;
+}
+nav ol li a:visited {
+  color: var(--dark-blue);
+}
+nav {
+  color: var(--dark-blue);
+  font-family: 'Courgette';
+}
+
+.fa-facebook-square {
+  color: #4267b2;
 }
