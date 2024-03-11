@@ -76,17 +76,17 @@ cite {
 }
 
 /* ------------------Header---------------------- */
-header img {
+.page-header img {
   display: block;
   margin-inline: auto;
 }
-nav ol li a {
+.page-nav-link {
   text-decoration: none;
 }
-nav ol li a:visited {
+.page-nav-link:visited {
   color: var(--dark-blue);
 }
-nav {
+.page-nav {
   color: var(--dark-blue);
   font-family: 'Courgette';
   line-height: 3rem;
@@ -94,7 +94,7 @@ nav {
 
 /* ------------------Footer---------------------- */
 
-footer {
+.page-footer {
   border-top: 2px solid #003884;
   text-align: center;
 }
