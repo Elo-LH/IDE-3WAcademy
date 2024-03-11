@@ -67,8 +67,25 @@ nav ol li a:visited {
 nav {
   color: var(--dark-blue);
   font-family: 'Courgette';
+  line-height: 3rem;
 }
 
-.fa-facebook-square {
-  color: #4267b2;
+.fa-brands {
+  color: var(--dark-blue);
+}
+.container article > img {
+  display: block;
+  margin-inline: auto;
+}
+.float-start {
+  float: left;
+  margin: 1rem 1rem 1rem 0;
+}
+.float-end {
+  float: right;
+  margin: 1rem 0 1rem 1rem;
+}
+footer {
+  border-top: 2px solid #003884;
+  text-align: center;
 }
