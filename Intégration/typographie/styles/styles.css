@@ -1,3 +1,5 @@
+/* ------------------FONTS---------------------- */
+/* Cardo */
 @font-face {
   font-family: 'Cardo';
   src: url(../ressources/fonts/cardo/cardo-bold.woff) format('woff');
@@ -12,27 +14,23 @@
   src: url(../ressources/fonts/cardo/cardo-italic.woff) format('woff');
   font-style: italic;
 }
+/* SpecialElite */
 @font-face {
   font-family: 'SpecialElite';
   src: url(../ressources/fonts/specialelite/SpecialElite.woff) format('woff');
 }
 
+/* ------------------Global---------------------- */
 body {
   line-height: 1.5;
   font-family: 'Cardo';
 }
-
 .container {
   max-width: 420px;
   margin-inline: auto;
 }
 
-section p::first-letter {
-  font-family: 'SpecialElite';
-  font-size: 2rem;
-  padding: 0.2rem 0.7rem 0.7rem 0;
-  float: left;
-}
+/* ------------------Titles---------------------- */
 h1,
 h2,
 h3 {
@@ -52,6 +50,12 @@ h3 {
   font-size: 1.5em;
   line-height: 1;
 }
+h3::before {
+  content: '❧ ';
+}
+
+/* ------------------Quotes---------------------- */
+
 blockquote p::before {
   content: '« ';
 }
@@ -62,23 +66,33 @@ blockquote p {
   font-style: italic;
   font-size: 1.2rem;
 }
-
 cite {
   font-style: normal;
   display: inline-block;
   width: 100%;
   text-align: center;
 }
-h3::before {
-  content: '❧ ';
+/* ------------------header---------------------- */
+
+header {
+  border-bottom: 1px solid black;
 }
-#empattement {
-  border-top: 1px solid black;
+/* ------------------paragraphs---------------------- */
+
+section p::first-letter {
+  font-family: 'SpecialElite';
+  font-size: 2rem;
+  padding: 0.2rem 0.7rem 0.7rem 0;
+  float: left;
 }
+/* -----------------links---------------------- */
+
 a {
   text-decoration: underline dashed;
   text-underline-offset: 0.4em;
 }
+
+/* ------------------footer---------------------- */
 footer p:last-child {
   text-align: center;
   font-size: 3rem;
