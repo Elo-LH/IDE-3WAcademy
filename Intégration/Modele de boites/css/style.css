@@ -1,0 +1,122 @@
+/* PERSONALIZED RESET */
+body, ol, ul, li {
+  margin: 0;
+  padding: 0;
+}
+blockquote {
+  quotes: none;
+}
+blockquote::before, blockquote::after {
+  content: '';
+  content: none;
+}
+ul, ol {
+  list-style:  none;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  background-color: #eee;
+  font-family: arial, sans-serif;
+}
+p {
+  margin-bottom: 2.5rem;
+}
+
+/* *****************************************************************
+STYLES DEMO
+***************************************************************** */
+
+h1 {
+  font-size: 4rem;
+  color: #DD5735;
+  margin: 1rem 0;
+}
+
+h2 {
+  margin:  2rem 0 1rem;
+}
+
+section {
+  padding: 1em;
+  background-color: #fff;
+  margin-bottom: 2rem;
+}
+
+article {
+  padding: 1em;
+}
+
+.header {
+  padding: 1em;
+  text-align: center;
+  background-color: #ddd;
+  border: 1px solid #DD5735;
+}
+
+.header p {
+  margin: 1rem 0;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1100px;
+  padding: 1em;
+}
+
+.footer {
+  padding: 1em;
+  text-align: center;
+  background-color: #ddd;
+  border: 1px solid #555;
+}
+
+.footer a {
+  color: black;
+}
+
+.footer img {
+  width: 60px;
+}
+
+
+/* *****************************************************************
+DEMO
+***************************************************************** */
+
+
+.box {
+  background-color: #CCC;
+}
+
+.box1 {
+  margin: 2rem;
+}
+
+.box2 {
+  padding: 2rem;
+}
+
+.box3 {
+  padding: 2rem;
+  border: 5px solid #DD5735;
+}
+
+.box4, .box5 {
+  width: 500px;
+}
+
+.box4 {
+  padding: 2rem;
+  border: 5px solid #DD5735;
+}
+
+.box5 {
+  padding: 2rem;
+  border: 5px solid #DD5735;
+  box-sizing: border-box;
+}
