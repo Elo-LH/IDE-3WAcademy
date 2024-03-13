@@ -23,5 +23,6 @@ img {
 /****************************************************************/
 
 .header {
-  /* Ton code ici */
+  display: flex;
+  justify-content: space-between;
 }
