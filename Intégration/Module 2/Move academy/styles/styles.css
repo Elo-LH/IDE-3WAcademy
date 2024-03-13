@@ -1,0 +1,150 @@
+/*---------------------------------- Global style------------------------------------- */
+
+html {
+  box-sizing: border-box;
+  font-size: 0.625em;
+  font-size: calc(1em * 0.625);
+  --text: #363636;
+  --dark-purple: #7e4a7c;
+  --medium-purple: #b878b5;
+  --light-purple: #ffeefe;
+}
+body {
+  font-size: 1.6em;
+  font-family: 'Open Sans';
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+article {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+/*---------------------------------- Titles and text ------------------------------------ */
+h1,
+h2,
+h3,
+nav {
+  font-family: 'Economica';
+}
+
+h1 {
+  font-size: 5rem;
+  color: var(--dark-purple);
+}
+h2 {
+  font-size: 4rem;
+  color: var(--medium-purple);
+}
+h3 {
+  font-size: 3rem;
+  color: #7e4a7c;
+  margin: 0;
+}
+.italic-text {
+  color: var(--dark-purple);
+  font-style: italic;
+  margin: 0 0 1em 0;
+}
+li {
+  list-style-type: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin: 0 0 1em 0;
+}
+/*---------------------------------- Button ------------------------------------ */
+.button {
+  font-size: 2rem;
+  color: var(--light-purple);
+  background-color: #7e4a7c;
+  border: none;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.6em 0.8em;
+}
+
+.button-form {
+  font-size: 2.5rem;
+}
+
+/*---------------------------------- Header------------------------------------ */
+.header-page img {
+  display: block;
+  margin-inline: auto;
+}
+.nav-page {
+  background-color: var(--dark-purple);
+  color: var(--light-purple);
+  font-size: 2.4rem;
+  text-transform: uppercase;
+}
+.nav-page ul {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem 0;
+}
+
+.header-page {
+  text-align: center;
+}
+
+/*---------------------------------- About ------------------------------------ */
+
+.about-container {
+  display: flex;
+  flex-wrap: nowrap;
+  column-gap: 2rem;
+}
+
+.about-element {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.about-element li {
+  margin: 1em 0;
+}
+.about-element li img {
+  margin-right: 1em;
+}
+
+/*---------------------------------- Teachers ------------------------------------ */
+
+.teachers {
+  display: flex;
+  flex-wrap: wrap;
+}
+.teachers h2 {
+  flex-basis: 100%;
+}
+.teacher-card {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: row-reverse;
+  column-gap: 5rem;
+  padding: 5;
+}
+.teacher-card > * {
+  width: 50%;
+}
+.teacher-infos {
+  display: flex;
+  flex-direction: column;
+}
+/*---------------------------------- Footer------------------------------------ */
+.footer-nav-socials {
+  background-color: var(--dark-purple);
+  text-align: center;
+}
+.copyright {
+  font-size: 1.4rem;
+  text-align: center;
+}
