@@ -31,3 +31,28 @@ li {
 }
 
 /*********************** TON CODE ICI *************************/
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+.main-header {
+  display: flex;
+  justify-content: space-around;
+}
+.tools {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100px;
+}
+.tools div {
+  padding: 0.5em;
+}
+.main-nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+.main-nav li {
+  padding: 1em;
+}

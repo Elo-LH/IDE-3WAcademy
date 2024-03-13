@@ -30,3 +30,20 @@ li {
 }
 
 /*********************** TON CODE ICI *************************/
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+}
+.main-nav ul {
+  display: flex;
+  justify-content: flex-end;
+}
+.main-nav ul li {
+  padding: 1em;
+}
