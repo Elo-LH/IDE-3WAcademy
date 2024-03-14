@@ -13,11 +13,17 @@ body {
   font-size: 1.6em;
   font-family: 'Lato';
   line-height: 1.5;
+
+  color: var(--text);
 }
 html,
 body {
   margin: 0;
   padding: 0;
+}
+section {
+  max-width: 900px;
+  margin-inline: auto;
 }
 
 /*---------------------------------- Titres ------------------------------------- */
@@ -41,4 +47,204 @@ h3 {
   font-size: 2.5rem;
 }
 
+/*---------------------------------- Button ------------------------------------- */
+
+.button-blue {
+  background-color: var(--blue-lagoon);
+  border-radius: 6px;
+  border: none;
+  color: white;
+  padding: 0.5em 1em;
+  font-size: 1.6rem;
+}
+
 /*---------------------------------- Header ------------------------------------- */
+.header-page {
+  text-align: center;
+}
+
+.nav-page {
+  background-color: var(--blue-lagoon);
+}
+.nav-page a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: 1em 1em;
+  margin: 0 4em;
+}
+
+/*---------------------------------- Voyages ------------------------------------- */
+
+.text-red {
+  color: #f00;
+}
+.text-ocre {
+  color: #cd8c56;
+}
+.voyage-card {
+  border-bottom: solid 1px black;
+  height: 380px;
+}
+.voyage-card img {
+  display: block;
+  max-width: 49%;
+  float: left;
+}
+.voyage-card:nth-child(odd) img {
+  float: right;
+}
+.voyage-text {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 49%;
+  padding-left: 2rem;
+}
+.voyage-text p {
+  margin-top: 0;
+}
+.voyage-text button {
+  width: fit-content;
+}
+
+/* Voyage nav */
+
+.nav-voyages {
+  width: fit-content;
+  margin: 2rem auto 5rem auto;
+}
+.nav-voyages:first-child {
+  background-color: lightgrey;
+}
+
+/*---------------------------------- Quand partir ------------------------------------- */
+
+.table-saisons {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 5rem;
+}
+.table-saisons td {
+  border: grey 1px solid;
+  padding: 1em;
+}
+.table-saisons thead {
+  font-weight: bold;
+  text-align: center;
+}
+.table-saisons tbody tr:nth-child(odd) {
+  background-color: lightcyan;
+}
+
+/*---------------------------------- A propos ------------------------------------- */
+
+#a-propos {
+  max-width: none;
+  padding: 5rem 0;
+  background: url(../ressources/fond.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.container-apropos {
+  max-width: 900px;
+  margin-inline: auto;
+}
+.text-apropos {
+  background-color: white;
+  padding: 2rem;
+  width: 50%;
+}
+
+/*---------------------------------- Me contacter ------------------------------------- */
+
+.contact-infos > * {
+  margin: 0.5rem;
+}
+.contact-infos a {
+  display: block;
+  text-decoration: none;
+}
+.contact-infos a i {
+  color: #333;
+}
+/* Formulaire de contact */
+.form-contact {
+  background: url(../ressources/map-image.png);
+  background-color: #333;
+  background-size: cover;
+  padding-bottom: 5rem;
+}
+.fieldsets {
+  display: flex;
+  align-items: stretch;
+}
+.form-contact fieldset {
+  flex: 1;
+  background: transparent;
+  margin: 2rem;
+  border: none;
+  display: flex;
+  flex-direction: column;
+}
+.form-contact fieldset input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 1rem;
+}
+.form-contact fieldset textarea {
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+}
+.form-contact button {
+  display: block;
+  margin-inline: auto;
+}
+.form-contact-infos {
+  display: flex;
+  flex-direction: column;
+}
+.form-contact-infos > * {
+  flex: 1;
+}
+
+/* Nav socials  */
+.fa-square-facebook {
+  color: #4267b2;
+}
+.fa-square-twitter {
+  color: #1da1f2;
+}
+.fa-square-pinterest {
+  color: #bd081c;
+}
+.fa-square-instagram {
+  color: #8948c1;
+}
+.text-nav-socials {
+  margin-bottom: 0;
+}
+.nav-socials {
+  margin-bottom: 2rem;
+}
+
+/*---------------------------------- Footer ------------------------------------- */
+
+.copyright {
+  font-size: 1.4rem;
+  text-align: center;
+}
+.copyright {
+  color: white;
+  background-color: #007eb3;
+  padding: 2rem;
+}
+.copyright img {
+  width: 50px;
+}
+.copyright a {
+  color: white;
+}
