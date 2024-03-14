@@ -69,6 +69,8 @@ p {
   text-transform: uppercase;
   text-align: center;
   padding: 0.6em 0.8em;
+  width: fit-content;
+  cursor: pointer;
 }
 
 .button-form {
@@ -82,7 +84,7 @@ p {
 }
 .nav-page {
   background-color: var(--dark-purple);
-  color: var(--light-purple);
+
   font-size: 2.4rem;
   text-transform: uppercase;
 }
@@ -94,6 +96,10 @@ p {
 
 .header-page {
   text-align: center;
+}
+.nav-page a {
+  color: var(--light-purple);
+  text-decoration: none;
 }
 
 /*---------------------------------- About ------------------------------------ */
@@ -121,30 +127,102 @@ p {
 .teachers {
   display: flex;
   flex-wrap: wrap;
+  gap: 5rem;
 }
 .teachers h2 {
   flex-basis: 100%;
 }
 .teacher-card {
-  flex-basis: 50%;
   display: flex;
   flex-direction: row-reverse;
-  column-gap: 5rem;
+  column-gap: 2rem;
   padding: 5;
-}
-.teacher-card > * {
-  width: 50%;
+  max-width: 550px;
 }
 .teacher-infos {
   display: flex;
   flex-direction: column;
 }
+/*---------------------------------- Classes ------------------------------------ */
+
+.table-classes {
+  border-collapse: collapse;
+  width: 90%;
+  margin-inline: auto;
+  text-align: center;
+}
+.table-classes td {
+  border: solid 1px var(--medium-purple);
+  padding: 1rem;
+}
+.table-classes tbody td:empty {
+  background-color: var(--light-purple);
+}
+.table-classes thead {
+  background-color: var(--dark-purple);
+  color: var(--light-purple);
+}
+
+/*---------------------------------- Form ------------------------------------ */
+
+.form-booking {
+  border: var(--medium-purple) 1px solid;
+  padding: 1rem;
+  color: var(--dark-purple);
+  display: flex;
+  flex-direction: column;
+}
+.form-booking fieldset {
+  background-color: var(--light-purple);
+  border: none;
+  padding: 2rem;
+  margin-bottom: 1rem;
+  display: flex;
+}
+.fieldset-contact label {
+  width: 50%;
+}
+.fieldset-contact input {
+  width: 60%;
+  border: var(--medium-purple) 1px solid;
+  padding: 0.4em 0;
+}
+.fieldset-reservation label {
+  width: 33%;
+}
+.fieldset-reservation select {
+  width: 60%;
+  border: var(--medium-purple) 1px solid;
+  background-color: white;
+  padding: 0.4em 0;
+}
+.form-booking button {
+  align-self: center;
+}
+
 /*---------------------------------- Footer------------------------------------ */
 .footer-nav-socials {
   background-color: var(--dark-purple);
   text-align: center;
+  margin-top: 5rem;
+  padding: 3rem;
 }
 .copyright {
   font-size: 1.4rem;
   text-align: center;
+}
+.copyright {
+  color: white;
+  background-color: #363636;
+  padding: 5rem;
+}
+.copyright img {
+  width: 50px;
+}
+.copyright a {
+  color: white;
+}
+.fa-brands {
+  color: white;
+  padding: 0 2rem;
 }

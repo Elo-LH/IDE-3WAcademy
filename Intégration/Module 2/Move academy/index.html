@@ -11,6 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/48b4064506.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <article title="move academy dance sport fitness classes lessons school">
@@ -18,16 +22,16 @@
         <img src="images/logo-move-academy.png" alt="Move Academy" />
         <nav class="nav-page">
           <ul>
-            <li>About</li>
-            <li>Staff</li>
-            <li>Classes</li>
-            <li>Booking</li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#teachers">Staff</a></li>
+            <li><a href="#classes">Classes</a></li>
+            <li><a href="#booking">Booking</a></li>
           </ul>
         </nav>
         <h1>Community, dedication and fun at our core !</h1>
       </header>
       <main>
-        <section class="about">
+        <section id="about" class="about">
           <h2>About the school</h2>
           <div class="about-container">
             <div class="about-element">
@@ -83,7 +87,7 @@
             </div>
           </div>
         </section>
-        <section class="teachers">
+        <section id="teachers" class="teachers">
           <h2>Our teachers</h2>
           <div class="teacher-card">
             <div class="teacher-infos">
@@ -148,20 +152,88 @@
             <img src="images/teacher3.jpg" alt="" />
           </div>
         </section>
-        <section class="classes">
-          <table></table>
+        <section id="classes" class="classes">
+          <h2>Our classes</h2>
+          <table class="table-classes">
+            <thead>
+              <tr>
+                <td></td>
+                <td>Dayle</td>
+                <td>Julia</td>
+                <td>Tricia</td>
+                <td>Teddy</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Monday</td>
+                <td>16:30 - 20:00</td>
+                <td>18 - 20</td>
+                <td>17 - 19</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Tuesday</td>
+                <td>10 - 12</td>
+                <td></td>
+                <td>16:30 - 18:30</td>
+                <td>18 - 20</td>
+              </tr>
+              <tr>
+                <td>Wednesday</td>
+                <td>11 - 13</td>
+                <td>10 - 12</td>
+                <td>14:30 - 16:30</td>
+                <td>15:30 - 17:30</td>
+              </tr>
+              <tr>
+                <td>Thursday</td>
+                <td></td>
+                <td>16 - 18</td>
+                <td>18 - 20</td>
+                <td>17 - 20</td>
+              </tr>
+              <tr>
+                <td>Friday</td>
+                <td>16:30 - 18:30</td>
+                <td>17 - 19</td>
+                <td></td>
+                <td>18 - 20</td>
+              </tr>
+              <tr>
+                <td>Saturday</td>
+                <td>
+                  10 - 12 <br />and <br />
+                  14:30 - 16:30
+                </td>
+                <td>
+                  11 - 13 <br />and <br />
+                  15 - 17
+                </td>
+                <td>
+                  10:30 - 12:30 <br />and <br />
+                  14:30 - 16:30
+                </td>
+                <td>
+                  10 - 12 <br />and <br />
+                  14 - 16
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </section>
-        <section class="booking">
-          <form action="get">
-            <fieldset>
+        <section id="booking" class="booking">
+          <h2>Book your lesson</h2>
+          <form class="form-booking" action="post">
+            <fieldset class="fieldset-contact">
               <label for="name"
-                >Your name:<input id="name" name="name" type="text"
+                >Your name: <input id="name" name="name" type="text"
               /></label>
               <label for="email"
-                >Your name:<input id="mail" name="email" type="email"
+                >Your email: <input id="mail" name="email" type="email"
               /></label>
             </fieldset>
-            <fieldset>
+            <fieldset class="fieldset-reservation">
               <label name="teacher-select" for="teacher-select"
                 >Teacher:
                 <select name="teachers" id="teacher-select">
@@ -201,16 +273,18 @@
     </article>
     <footer class="footer-page">
       <nav class="footer-nav-socials">
-        <img src="images/reseaux.png" alt="Facebook" />
-        <img src="" alt="Twitter" />
-        <img src="" alt="Vimeo" />
-        <img src="" alt="Instagram" />
+        <i class="fa-brands fa-2xl fa-facebook-f"></i>
+        <i class="fa-brands fa-2xl fa-twitter"></i>
+        <i class="fa-brands fa-2xl fa-vimeo-v"></i>
+        <i class="fa-brands fa-2xl fa-instagram"></i>
       </nav>
       <div class="copyright">
-        <img src="" alt="3W Academy" />
+        <img src="images/logo-3wa.png" alt="3W Academy" />
         <p>
-          Ce matériel pédagogique est la propriété de la 3W Academy. Cet
-          exercice a été réalisé par Stephane Pereck.
+          Ce matériel pédagogique est la propriété de la
+          <a target="_blank" href="https://www.youtube.com/watch?v=ciR3sUdgma0"
+            >3W Academy</a
+          >. Cet exercice a été réalisé par Stephane Pereck.
         </p>
       </div>
     </footer>
