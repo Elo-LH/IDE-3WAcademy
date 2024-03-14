@@ -285,3 +285,6 @@ h3 {
 .visit-card p {
   padding: 0 1rem;
 }
+.link-map-zoom {
+  text-decoration: none;
+}
