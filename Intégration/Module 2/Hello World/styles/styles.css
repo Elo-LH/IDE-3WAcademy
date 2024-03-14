@@ -66,6 +66,10 @@ h3 {
   cursor: default;
   background-color: grey;
 }
+.button-blue a {
+  text-decoration: none;
+  color: white;
+}
 
 /*---------------------------------- Header ------------------------------------- */
 .header-page {
@@ -256,4 +260,28 @@ h3 {
 }
 .copyright a {
   color: white;
+}
+
+/*---------------------------------- Vienne page ------------------------------------- */
+
+.visit-cards-wrapper {
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3rem;
+  grid-template-rows: 100%;
+  background-color: lightgrey;
+  row-gap: 2rem;
+  margin-bottom: 5rem;
+}
+.visit-card {
+  width: 405px;
+  background-color: white;
+}
+.visit-card h4 {
+  text-align: center;
+  margin: 1rem 0;
+}
+.visit-card p {
+  padding: 0 1rem;
 }
