@@ -5,14 +5,207 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hello World - Agence de Voyage</title>
     <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/48b4064506.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <article
       title="carnets voyage agence aventure monde budget organiser reserver"
     >
       <header>
-        <img src="ressources/" alt="" />
+        <img src="ressources/logo.png" alt="Hello World" />
+        <nav>
+          <a href="#carnets-voyage">Carnets de Voyage</a>
+          <a href="#quand-partir">Quand partir ?</a>
+          <a href="#a-propos">À propos</a>
+          <a href="#contact">Me contacter</a>
+        </nav>
+        <h1>Carnets de Voyage</h1>
       </header>
+      <main>
+        <section id="carnets-voyage">
+          <h2>Mes derniers voyages</h2>
+          <div class="voyage-card">
+            <h3>Vienne, Autriche</h3>
+            <img src="ressources/vienne.jpg" alt="" />
+            <p>
+              Vienne est un mélange d’architecture fastueuse, de musique et de
+              charme pittoresque.
+            </p>
+            <p>
+              Semblable à nulle autre, Vienne préserve intact son aspect
+              historique d’origine marqué par des édifices fastueux datant de
+              l’époque baroque et des débuts du XXème siècle. historique
+              d’origine marqué par des édifices fastueux datant de l’époque
+              baroque et des débuts du XXème siècle.
+            </p>
+            <p>
+              Semblable à nulle autre, Vienne préserve intact son aspect
+              historique d’origine marqué par des édifices fastueux datant de
+              l’époque baroque et des débuts du XXème siècle.
+            </p>
+            <button class="button-blue">En savoir plus</button>
+          </div>
+          <div class="voyage-card">
+            <h3>Marrakech, Maroc</h3>
+            <img src="ressources/marrakech.jpg" alt="" />
+
+            <p>
+              Marrakech, est une ville située dans le centre du Maroc au pied
+              des montagnes de l'Atlas. Marrakech est surnommée « la ville rouge
+              » ou la « ville ocre » en référence à la couleur rouge d'une
+              grande partie de ses immeubles et ses maisons.
+            </p>
+            <p>
+              Marrakech est une ville unique en son genre qui se distingue
+              totalement du reste. Visiter Marrakech est une expérience qui
+              stimulera tous vos sens : ses couleurs, ses saveurs et ses odeurs
+              vous marqueront dès votre arrivée et vous accompagneront des
+              semaines après votre retour.
+            </p>
+            <button class="button-blue">En savoir plus</button>
+          </div>
+          <nav class="voyages-nav">
+            <button>Page précédente</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>Page suivante</button>
+          </nav>
+        </section>
+        <section id="quand-partir">
+          <h2>Les meilleures saisons pour voyager</h2>
+          <table>
+            <thead>
+              <tr>
+                <td>Ville</td>
+                <td>Pays</td>
+                <td>Périodes</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Bali</td>
+                <td>Indonésie</td>
+                <td>juinà septembre</td>
+              </tr>
+              <tr>
+                <td>Marrakech</td>
+                <td>Maroc</td>
+                <td>mars àa juin, septembre à novembre</td>
+              </tr>
+              <tr>
+                <td>Miami</td>
+                <td>USA</td>
+                <td>janvier à avril, novembre, décembre</td>
+              </tr>
+              <tr>
+                <td>Vienne</td>
+                <td>Autriche</td>
+                <td>juin à septembre</td>
+              </tr>
+              <tr>
+                <td>Sydney</td>
+                <td>Australie</td>
+                <td>mars à mai, septembre et octobre</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <section id="a-propos">
+          <h2>À propos</h2>
+          <p>Je m'appelle Claire et j'aime les voyages et l'aventure.</p>
+          <p>
+            C'est suite à un long tour du monde que j'ai changé de vie et que
+            j'ai décidé de créer ce blog pour vous aider à voyager.
+          </p>
+          <p>
+            Ma passion pour le voyage est désormais devenu mon métier. Vous
+            pourrez trouver ici de l'inspiration et de nombreux conseils pour
+            réduire votre budget voyages et pouvoir partir plus souvent.
+          </p>
+        </section>
+        <section id="contact">
+          <h2>Me contacter</h2>
+          <p>31 Rue d'Auteuil, Paris 16ème</p>
+          <a href="mailto:claire@helloworld.com">claire@helloworld.com</a>
+          <a href="tel:+33601030507">06 01 03 05 07</a>
+          <h3>Formulaire de contact</h3>
+          <form action="post">
+            <fieldset>
+              <label name="name" for="name"
+                ><input
+                  placeholder="Votre nom"
+                  id="name"
+                  name="name"
+                  type="text" /></label
+              ><label name="email" for="email"
+                ><input
+                  placeholder="Votre email"
+                  id="email"
+                  name="email"
+                  type="email" /></label
+              ><label name="tel" for="tel"
+                ><input
+                  placeholder="Votre numéro de téléphone"
+                  name="tel"
+                  id="tel"
+                  type="tel"
+              /></label>
+            </fieldset>
+            <fieldset>
+              <label name="message" for="message">
+                <textarea
+                  name="message"
+                  id="message"
+                  cols="30"
+                  rows="10"
+                  placeholder="Votre message"
+                ></textarea>
+              </label>
+            </fieldset>
+            <button class="button-blue" type="submit">Envoyer</button>
+          </form>
+        </section>
+        <footer>
+          <p>Suivez-moi sur :</p>
+          <nav class="nav-socials">
+            <a href="https://www.youtube.com/watch?v=ciR3sUdgma0"
+              ><i class="fa-brands fa-xl fa-square-facebook"></i
+            ></a>
+            <a href="https://www.youtube.com/watch?v=ciR3sUdgma0"
+              ><i class="fa-brands fa-xl fa-square-twitter"></i
+            ></a>
+            <a href="https://www.youtube.com/watch?v=ciR3sUdgma0"
+              ><i class="fa-brands fa-xl fa-square-pinterest"></i
+            ></a>
+            <a href="https://www.youtube.com/watch?v=ciR3sUdgma0"
+              ><i class="fa-brands fa-xl fa-square-instagram"></i
+            ></a>
+          </nav>
+          <div class="copyright">
+            <img src="ressources/logo-3wa.png" alt="3W Academy" />
+            <p>
+              Ce matériel pédagogique est la propriété de la
+              <a
+                target="_blank"
+                href="https://www.youtube.com/watch?v=ciR3sUdgma0"
+                >3W Academy</a
+              >. Cet exercice a été réalisé par Christiane Dumont.
+            </p>
+            <p>Images fournies par Pixabay</p>
+          </div>
+        </footer>
+      </main>
     </article>
   </body>
 </html>

@@ -1,0 +1,44 @@
+/*---------------------------------- Global style------------------------------------- */
+
+html {
+  box-sizing: border-box;
+  font-size: 0.625em;
+  font-size: calc(1em * 0.625);
+  --text: #333;
+  --blue-lagoon: #007eb3;
+  --medium-purple: #b878b5;
+  --light-purple: #ffeefe;
+}
+body {
+  font-size: 1.6em;
+  font-family: 'Lato';
+  line-height: 1.5;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*---------------------------------- Titres ------------------------------------- */
+
+h1,
+h2,
+h3 {
+  font-weight: normal;
+}
+h1 {
+  font-size: 4.5rem;
+  color: var(--blue-lagoon);
+  word-spacing: 10px;
+  border-bottom: 1px dotted;
+}
+h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+h3 {
+  font-size: 2.5rem;
+}
+
+/*---------------------------------- Header ------------------------------------- */
