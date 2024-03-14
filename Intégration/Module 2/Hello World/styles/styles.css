@@ -56,6 +56,15 @@ h3 {
   color: white;
   padding: 0.5em 1em;
   font-size: 1.6rem;
+  cursor: pointer;
+}
+.button-inactive {
+  cursor: default;
+  background-color: lightblue;
+}
+.button-active {
+  cursor: default;
+  background-color: grey;
 }
 
 /*---------------------------------- Header ------------------------------------- */
