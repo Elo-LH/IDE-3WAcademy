@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box; /* On spécifie que la largeur (width) de chaque boîte comprend le padding et la bordure (par défaut, c'est seulement la largeur du contenu) */
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px (la formule est 10/16*100) la taille par défaut étant 16px */
+}
+
+body {
+  font-size: 1.6rem; /* on remets la taille du texte par défaut pour le body à 16px en utilisant les rem comme unité) */
+  max-width: 1100px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Header page  */
+
+.header-page img {
+  display: block;
+  margin: 0 auto;
+}
+.nav-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Main galerie */
+
+/* Header galerie  */
+.header-galerie {
+  background: url(../images/banner2.jpg);
+  padding: 8rem 0;
+}
+.header-galerie h1 {
+  width: fit-content;
+  padding: 2rem;
+  background-color: #ffffffe6;
+  color: #db0059;
+  margin: 0 auto;
+}
+
+/* Header grid  */
+
+.galerie-grid {
+  width: 90%;
+  margin: 4rem auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(24 1fr);
+  gap: 4px;
+  @media screen and (min-width: 780px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media screen and (min-width: 980px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.img-big {
+  grid-row: span 2;
+}
