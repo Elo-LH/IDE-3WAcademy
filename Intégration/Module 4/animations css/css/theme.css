@@ -1,0 +1,65 @@
+/* Le code CSS de la démo */
+.red {
+  border: 2px red solid;
+  position: absolute;
+  top: 5px;
+  left: -5px;
+  animation: circle 0.7s linear infinite;
+}
+.yellow {
+  border: 2px yellow solid;
+  position: absolute;
+  top: 0px;
+  animation: circle 1s linear infinite;
+}
+.blue {
+  border: 2px blue solid;
+}
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.loader {
+  position: relative;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(360deg) translate(10px) rotate(-360deg);
+  }
+  100% {
+    transform: rotate(0deg) translate(10px) rotate(-0deg);
+  }
+}
+
+.loader-bar {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.bar {
+  width: 15px;
+  height: 50px;
+  background-color: white;
+  animation: big 1.4s linear infinite;
+}
+.bar2 {
+  animation-delay: 0.2s;
+}
+.bar3 {
+  animation-delay: 0.4s;
+}
+@keyframes big {
+  0% {
+    transform: scale(1, 1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
