@@ -1,0 +1,38 @@
+
+/* *****************************************************************
+ DECLARATION DES VARIABLES
+***************************************************************** */
+
+:root {
+	--txtcolor: #444;
+	--ff: arial;
+	--fz: 2rem;
+	--fw: bold;
+	--btn: #DD5735;
+	--btncolor: #fff;
+}
+
+/* *****************************************************************
+ MAIN
+***************************************************************** */
+
+.demo {
+	font-family: var(--ff);
+}
+
+.demo h2 {
+	color: var(--txtcolor);
+	font-size: var(--fz);
+	font-weight: var(--fw);
+	line-height: 48px;
+  }
+
+ .btn {
+	background-color: var(--btn);
+	color: var(--btncolor);
+	text-decoration: none;
+	display: inline-block;
+	padding: 1rem 2rem;
+	font-weight: var(--fw);
+	margin-top: 10px;
+  }
