@@ -1,0 +1,24 @@
+h2 {
+  margin: 0;
+}
+
+/* le menu */
+.nav-access {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+.nav-access a {
+  position: absolute;
+  display: block;
+  padding: 1em;
+  white-space: nowrap;
+  color: white;
+  background-color: black;
+  opacity: 0;
+}
+.nav-access a:focus {
+  opacity: 1;
+}
