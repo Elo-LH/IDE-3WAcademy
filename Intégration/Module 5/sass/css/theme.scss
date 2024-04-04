@@ -1,0 +1,47 @@
+// Déclaration des variables (commentaire SASS)
+$base: #369;
+$title-1: #c33;
+
+// Utilisation des fonctions prédéfinies
+$title-2: darken($title-1, 10%); // #a32929
+$title-3: darken($title-1, 20%); // #7a1f1f
+
+// Utilisation des variables
+main {
+	color: $base;
+}
+main h1 {
+	color: $title-1;
+}
+
+// Imbrication
+.imbrication {
+	
+	h2 {
+		color: $title-2;
+	}
+	
+	section {
+		padding: 1em;
+		border: 1px solid $title-3;
+		
+		h3 {
+			color: $title-3;
+		}
+	}
+}
+
+// Automatisation
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+.row > * {
+	margin-left: 1%;
+	margin-bottom: 1%;
+}
+@for $i from 2 to 7 {
+	.cols-#{$i} > * {
+		width: 100% / $i - 1%;
+	}
+}
