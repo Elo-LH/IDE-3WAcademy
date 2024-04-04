@@ -20,7 +20,6 @@ let stockVoitures = [{
   stock: 56,
   prixUnitaire: 250000
 }];
-
 console.log(stockVoitures);
 
 /*
@@ -31,6 +30,10 @@ console.log(stockVoitures);
     rouge
 */
 
+stockVoitures.forEach(voiture => {
+  console.log(voiture.couleur)
+});
+
 /*
   Exercice 2 : Afficher les modèles de voitures
     Opel Astra
@@ -38,6 +41,10 @@ console.log(stockVoitures);
     Peugeot 205
     Ferrari
 */
+stockVoitures.forEach(voiture => {
+  console.log(voiture.modele)
+});
+
 
 /*
   Exercice 3 : Afficher modèle, couleur et prix de chaque voiture
@@ -47,6 +54,10 @@ console.log(stockVoitures);
     Ferrari, rouge, 250000
 */
 
+stockVoitures.forEach(voiture => {
+  console.log(`${voiture.modele}, ${voiture.couleur}, ${voiture.prixUnitaire}`)
+});
+
 /*
   Exercice 4 : Calculer et afficher la valeur du stock de chaque modèle
     Opel Astra, 52000
@@ -55,10 +66,19 @@ console.log(stockVoitures);
     Ferrari, 14000000
 */
 
+stockVoitures.forEach(voiture => {
+  console.log(`${voiture.modele}, ${voiture.stock * voiture.prixUnitaire}`)
+});
+
 /*
   Exercice 5 : Calculer et afficher la valeur totale du stock, tout modèle confondu
     Valeur stock : 169302000
 */
+
+let totalStock = stockVoitures.reduce((acc, voiture) =>
+acc + voiture.stock * voiture.prixUnitaire
+, 0);
+console.log(totalStock)
 
 /*
   Exercice 6 : Ajouter la voiture suivante à la collection
@@ -70,23 +90,45 @@ let nouvelleVoiture = {
   prixUnitaire: 56230
 };
 
+stockVoitures.push(nouvelleVoiture)
+console.log(stockVoitures)
+
 /*
   Exercice 7 : Modifier la couleur de la Peugeot 205, mettre vert à la place de bleu
 */
+
+let peugeot = stockVoitures.find((voiture) => voiture.modele == "Peugeot 205")
+peugeot.couleur = 'vert'
+console.log(stockVoitures)
 
 /*
   Exercice 8 : Ajouter la propriété suivante à chaque voiture de la collection
   - estUneVoiture: true
 */
 
+stockVoitures.forEach(voiture => {
+  voiture.estUneVoiture = true
+});
+console.log(stockVoitures)
+
 /*
   Exercice 9 : Modifier le stock de Peugeot 205 pour le mettre à 1500
 */
+peugeot.stock = 1500
+
 
 /*
   Exercice 10 : Rechercher les voitures de couleur noir
 */
 
+let voituresNoires = stockVoitures.filter((voiture) =>
+voiture.couleur === 'noir'
+)
+console.log(voituresNoires)
+
 /*
   Exercice 11 : Supprimer la Peugeot 205 (sachant que sa position dans le tableau peut changer)
 */
+let idPeugeot = stockVoitures.findIndex((voiture) => voiture.modele == 'Peugeot 205')
+stockVoitures.splice(idPeugeot, 1)
+console.log(stockVoitures)
