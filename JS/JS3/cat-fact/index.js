@@ -29,5 +29,15 @@ function fetchData() {
 }
 fetchData()
 
+function showJason() {
+  let jason = document.querySelector('.js-jason')
+  jason.style.display = 'block'
+
+  setTimeout(() => {
+    jason.style.display = 'none'
+  }, 1000)
+}
+
 let button = document.querySelector('.js-fetch-button')
 button.addEventListener('click', fetchData)
+button.addEventListener('click', showJason)
