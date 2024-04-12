@@ -110,6 +110,8 @@ let productsCollection = [
   },
 ]
 
+let modifiedID = ''
+
 function getName(product) {
   let productName = document.createElement('p')
   productName.innerText = product.product_name
@@ -159,16 +161,16 @@ function displayProducts() {
 
 function modifyRow(event) {
   let id = event.target.getAttribute('data-id')
+  modifiedID = id
   let productToModify = productsCollection.find((product) => product._id === id)
   console.log(productToModify)
   openModale()
-  fillModaleInputs(id)
+  fillModaleInputs(productToModify)
 }
 
-function fillModaleInputs(id) {
-  let product = productsCollection.find((product) => product._id === id)
+function fillModaleInputs(product) {
   let nameInput = document.querySelector('#productNameId')
-  nameInput.value = product.name
+  nameInput.value = product.product_name
   let idInput = document.querySelector('#productId')
   idInput.value = product._id
   idInput.type = 'text'
@@ -189,11 +191,20 @@ function closeModale() {
   idInput.value = ''
   idInput.type = 'hidden'
 }
-function saveNewProduct() {
+function saveProduct() {
   //get name input
   let name = document.querySelector('#productNameId')
-  console.log(name.value)
-  addProduct(name.value)
+  let id = document.querySelector('#productId')
+  if (id.value != '') {
+    let productToModify = productsCollection.find(
+      (product) => product._id === modifiedID
+    )
+    console.log(productToModify)
+    productToModify.product_name = name.value
+    productToModify._id = id.value
+  } else {
+    addProduct(name.value)
+  }
   closeModale()
   refreshProducts()
 }
@@ -275,7 +286,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   //save a new product
   let saveButton = document.querySelector('.js-save-button')
-  saveButton.addEventListener('click', saveNewProduct)
+  saveButton.addEventListener('click', saveProduct)
 
   //search for product
   let searchButton = document.querySelector('.js-search-products')
