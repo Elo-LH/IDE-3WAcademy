@@ -123,6 +123,8 @@ function getImg(product) {
 }
 
 function displayProducts() {
+  console.log('displayProducts')
+  console.log(productsCollection[productsCollection.length - 1])
   let tbody = document.querySelector('.js-tbody')
   productsCollection.forEach((product) => {
     let trow = document.createElement('trow')
@@ -143,12 +145,55 @@ function closeModale() {
   let modale = document.querySelector('.js-modale-container')
   modale.style.display = 'none'
 }
+
+function saveNewProduct() {
+  //get name input
+  let name = document.querySelector('#productNameId')
+  console.log(name.value)
+  addProduct(name.value)
+  closeModale()
+  refreshProducts()
+}
+
+function addProduct(name) {
+  //generate unique id
+  let id = Math.floor(Math.random() * Date.now()).toString(16)
+  //add to products collection
+  let product = {
+    _id: id,
+    product_name: name,
+    image_front_small_url: '',
+  }
+  console.log(product)
+  productsCollection.push(product)
+  console.log(productsCollection[productsCollection.length - 1])
+}
+
+function refreshProducts() {
+  let tbody = document.querySelector('.js-tbody')
+  tbody.innerHTML = ''
+  displayProducts()
+}
+
 // On loaded DOM
 document.addEventListener('DOMContentLoaded', function () {
+  //prevent default reload when submitting form
+  const form = document.querySelector('.js-form')
+  form.addEventListener('submit', function (event) {
+    event.preventDefault()
+  })
+  // Your form submission logic here
+
+  //open and close modale
   let addButton = document.querySelector('.js-add-product')
   addButton.addEventListener('click', openModale)
   let closeModaleButton = document.querySelector('.js-close-button')
   closeModaleButton.addEventListener('click', closeModale)
 
+  //save a new product
+  let saveButton = document.querySelector('.js-save-button')
+  saveButton.addEventListener('click', saveNewProduct)
+  //   productsCollection.push({ product_name: 'dog' })
+  //   console.log(productsCollection)
   displayProducts()
 })
