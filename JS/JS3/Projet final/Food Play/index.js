@@ -134,9 +134,14 @@ function displayProducts() {
     deleteButton.innerText = 'Delete'
     deleteButton.classList.add('js-delete-button')
     deleteButton.dataset.id = product._id
+    let modifyButton = document.createElement('button')
+    modifyButton.innerText = 'Modify'
+    modifyButton.classList.add('js-modify-button')
+    modifyButton.dataset.id = product._id
     trow.appendChild(productName)
     trow.appendChild(productImg)
     trow.appendChild(deleteButton)
+    trow.appendChild(modifyButton)
     tbody.appendChild(trow)
 
     //adding event listener to remove button of each product
@@ -144,7 +149,29 @@ function displayProducts() {
     deleteButtons.forEach((deleteButton) => {
       deleteButton.addEventListener('click', removeRow)
     })
+    //adding event listener to modify button of each product
+    let modifyButtons = document.querySelectorAll('.js-modify-button')
+    modifyButtons.forEach((modifyButton) => {
+      modifyButton.addEventListener('click', modifyRow)
+    })
   })
+}
+
+function modifyRow(event) {
+  let id = event.target.getAttribute('data-id')
+  let productToModify = productsCollection.find((product) => product._id === id)
+  console.log(productToModify)
+  openModale()
+  fillModaleInputs(id)
+}
+
+function fillModaleInputs(id) {
+  let product = productsCollection.find((product) => product._id === id)
+  let nameInput = document.querySelector('#productNameId')
+  nameInput.value = product.name
+  let idInput = document.querySelector('#productId')
+  idInput.value = product._id
+  idInput.type = 'text'
 }
 
 function openModale() {
@@ -152,8 +179,15 @@ function openModale() {
   modale.style.display = 'block'
 }
 function closeModale() {
+  //close modale
   let modale = document.querySelector('.js-modale-container')
   modale.style.display = 'none'
+  //clear input fields
+  let nameInput = document.querySelector('#productNameId')
+  nameInput.value = ''
+  let idInput = document.querySelector('#productId')
+  idInput.value = ''
+  idInput.type = 'hidden'
 }
 function saveNewProduct() {
   //get name input
