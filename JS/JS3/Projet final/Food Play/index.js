@@ -124,15 +124,26 @@ function getImg(product) {
 
 function displayProducts() {
   console.log('displayProducts')
-  console.log(productsCollection[productsCollection.length - 1])
+
   let tbody = document.querySelector('.js-tbody')
   productsCollection.forEach((product) => {
     let trow = document.createElement('trow')
     let productName = getName(product)
     let productImg = getImg(product)
+    let deleteButton = document.createElement('button')
+    deleteButton.innerText = 'Delete'
+    deleteButton.classList.add('js-delete-button')
+    deleteButton.dataset.id = product._id
     trow.appendChild(productName)
     trow.appendChild(productImg)
+    trow.appendChild(deleteButton)
     tbody.appendChild(trow)
+
+    //adding event listener to remove button of each product
+    let deleteButtons = document.querySelectorAll('.js-delete-button')
+    deleteButtons.forEach((deleteButton) => {
+      deleteButton.addEventListener('click', removeRow)
+    })
   })
 }
 
@@ -164,15 +175,27 @@ function addProduct(name) {
     product_name: name,
     image_front_small_url: '',
   }
-  console.log(product)
   productsCollection.push(product)
-  console.log(productsCollection[productsCollection.length - 1])
 }
 
 function refreshProducts() {
   let tbody = document.querySelector('.js-tbody')
   tbody.innerHTML = ''
   displayProducts()
+}
+
+function removeRow(event) {
+  console.log('entered remove row')
+  let id = event.target.getAttribute('data-id')
+  console.log(id)
+  deleteProduct(id)
+}
+
+function deleteProduct(id) {
+  let position = productsCollection.findIndex((product) => product._id === id)
+  productsCollection.splice(position, 1)
+  console.log(productsCollection)
+  refreshProducts()
 }
 
 // On loaded DOM
@@ -193,7 +216,6 @@ document.addEventListener('DOMContentLoaded', function () {
   //save a new product
   let saveButton = document.querySelector('.js-save-button')
   saveButton.addEventListener('click', saveNewProduct)
-  //   productsCollection.push({ product_name: 'dog' })
-  //   console.log(productsCollection)
+
   displayProducts()
 })
