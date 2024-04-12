@@ -151,12 +151,10 @@ function openModale() {
   let modale = document.querySelector('.js-modale-container')
   modale.style.display = 'block'
 }
-
 function closeModale() {
   let modale = document.querySelector('.js-modale-container')
   modale.style.display = 'none'
 }
-
 function saveNewProduct() {
   //get name input
   let name = document.querySelector('#productNameId')
@@ -165,7 +163,6 @@ function saveNewProduct() {
   closeModale()
   refreshProducts()
 }
-
 function addProduct(name) {
   //generate unique id
   let id = Math.floor(Math.random() * Date.now()).toString(16)
@@ -177,25 +174,54 @@ function addProduct(name) {
   }
   productsCollection.push(product)
 }
-
 function refreshProducts() {
   let tbody = document.querySelector('.js-tbody')
   tbody.innerHTML = ''
   displayProducts()
 }
-
 function removeRow(event) {
   console.log('entered remove row')
   let id = event.target.getAttribute('data-id')
   console.log(id)
   deleteProduct(id)
 }
-
 function deleteProduct(id) {
   let position = productsCollection.findIndex((product) => product._id === id)
   productsCollection.splice(position, 1)
   console.log(productsCollection)
   refreshProducts()
+}
+function searchProduct() {
+  let searchInput = document.querySelector('.js-search-query')
+  let apiUrl = `https://world.openfoodfacts.org/api/v2/search?categories_tags=${searchInput.value}`
+  fetchData(apiUrl)
+}
+function fetchData(apiUrl) {
+  fetch(apiUrl).then((response) => {
+    console.log(response)
+    if (response.ok) {
+      //response.json().then(console.log)
+      response.json().then((data) => {
+        console.log(data)
+        // Ici se fait le traitement de données
+        if (data.products != []) {
+          data.products.forEach((product) => {
+            let cleanProduct = {
+              _id: product._id,
+              product_name: product.product_name,
+              image_front_small_url: product.image_front_small_url,
+            }
+            productsCollection.push(cleanProduct)
+            refreshProducts()
+          })
+        }
+      })
+    } else {
+      // La requete a echoué
+      console.log('La requête a échoué')
+      console.log(response)
+    }
+  })
 }
 
 // On loaded DOM
@@ -216,6 +242,10 @@ document.addEventListener('DOMContentLoaded', function () {
   //save a new product
   let saveButton = document.querySelector('.js-save-button')
   saveButton.addEventListener('click', saveNewProduct)
+
+  //search for product
+  let searchButton = document.querySelector('.js-search-products')
+  searchButton.addEventListener('click', searchProduct)
 
   displayProducts()
 })

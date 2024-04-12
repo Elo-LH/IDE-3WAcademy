@@ -29,8 +29,10 @@ ASTUCE : pour gérer le passage de l'identifiant du produit entre le tableau HTM
 utiliser les dataset : https://developer.mozilla.org/fr/docs/Web/API/HTMLElement/dataset
 
 Etape 5 : Rechercher un produit
-- Lorsque l'utilisateur saisie quelque chose dans le champ de recherche et clique sur le bouton "Rechercher"
-  -> Récupérer (avec fetch) les produits via l'url : https://world.openfoodfacts.org/api/v2/search?categories_tags=
+- Lorsque l'utilisateur saisie quelque chose dans le champ de recherche et clique sur
+ le bouton "Rechercher"
+  -> Récupérer (avec fetch) les produits via l'url :
+   https://world.openfoodfacts.org/api/v2/search?categories_tags=
      suivi de la valeur saisie dans le champ texte à côté du bouton
 
     Exemple : si l'utilisateur saisi toto dans le champ, l'url sera 
