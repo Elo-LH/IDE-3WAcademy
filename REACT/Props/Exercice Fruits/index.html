@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello React</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <!-- babel => compilation du JSX -->
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+    
+    // constantes
+    const precision = 10;
+
+    // Fonctions utiles
+    const avg = (prices) => {
+        if(prices.length > 0){
+            let sum  = 0;
+            for(const price of prices) sum += price;
+            /*  Arrondir un nombre à 1 chiffre après la virgule
+            
+                12.36666 * 10 => 123.66666
+                Math.floor(123.66666) => 123
+                123 / 10 => 12.3
+            */
+            return Math.floor( (sum / prices.length) * precision ) / precision;
+        }
+
+        return null;
+    }
+    const App = () => {
+        const products = [
+          { prices: [1.2, 1.1, 1.0], name: "apple" },
+          { prices: [1.8, 1.0, 1.9], name: "oragne" },
+          { prices: [1.0, 0.9, 1.1], name: "bananas" },
+        ];
+        
+        return (
+            <ProductList products={products} />
+        );
+    }
+    
+    const ProductList = (props) => {
+        const {products} = props;
+        
+        return (
+            <div>
+                {products.map((product, i) => <Product key={i} product={product} />)}
+            </div>
+        );
+    }
+    
+    // function Product() {...}
+    const Product = (props) => {
+        const { product } = props;
+        const { prices, name } = product;
+        
+        return (
+            <div>
+                <p>{name}</p>
+                <p>Moyenne des prix : {avg(prices)}</p>
+                <ul>
+                    {prices.map((price, i) => <li key={i}>{price}</li>)}
+                </ul>
+            </div>
+        );
+    }
+
+    ReactDOM.render(
+        <App />,
+        document.getElementById('root')
+    );
+    </script>
+</body>
+</html>
