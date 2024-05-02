@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello</title>
+</head>
+<body>
+    <button class="js-button">ClicMe</button>
+    <div class="js-board"></div>
+    <script type="text/javascript">
+        function createButton(label) {
+            const button = document.createElement('button');
+            button.innerText = label;
+            return button;
+        }
+
+        function createToolBar(tools) {
+            const board = document.querySelector('.js-board');
+            tools.forEach(function (tool) {
+                const button = createButton(tool.color);
+                board.appendChild(button);
+            });
+        }
+        let toolsBox = [{
+            penSize: 2,
+            color: 'blue',
+            penStyle: 'pencil'
+        },{
+            penSize: 4,
+            color: 'red',
+            penStyle: 'inker'
+        },{
+            penSize: 10,
+            color: 'yellow',
+            penStyle: 'brush'
+        },{
+            penSize: 1,
+            color: 'green',
+            penStyle: 'pen'
+        }];
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('.js-button').addEventListener('click', () => {
+                createToolBar(toolsBox);
+            });
+        });
+    </script>
+</body>
+</html>

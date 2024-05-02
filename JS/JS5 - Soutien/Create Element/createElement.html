@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello</title>
+</head>
+<body>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            // Création d'un élément HTML
+            const element = document.createElement('p');
+            element.innerText = 'Coucou';
+            console.log(element);
+            
+            // Ajoute l'élément à la fin de la fratrie dans body
+            document.body.appendChild(element);
+            
+            // Création d'un second élement
+            const element2 = document.createElement('span');
+            element2.innerHTML = '<strong>Plop</strong>';
+            
+            // Ajoute l'élément à la fin de la fratrie dans l'élément (<p>)
+            element.appendChild(element2);
+        });
+    </script>
+</body>
+</html>

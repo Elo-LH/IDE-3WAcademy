@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function Header(imageLogoSrc, titreSite) {
+            const _header = document.createElement('header');
+            _header.innerHTML = `<img src="${imageLogoSrc}" class="logo" /><h1>${titreSite}</h1>`;
+            
+            _header.querySelector('.logo').addEventListener('click', function() {
+                console.log('coucou');
+            });
+            
+            return _header;
+        }
+        
+        const header = Header('toto.jpg', 'Holà');
+        document.body.appendChild(header);
+    </script>
+</body>
+</html>

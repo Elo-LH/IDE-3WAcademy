@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello</title>
+</head>
+<body>
+    <button class="js-button">ClicMe</button>
+    <script type="text/javascript">
+        function createParagraph(content) {
+            const p = document.createElement('p');
+            p.innerText = content;
+            return p;
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('.js-button').addEventListener('click', () => {
+                const p = createParagraph('Plop !');
+                document.body.appendChild(p);
+            });
+        });
+    </script>
+</body>
+</html>

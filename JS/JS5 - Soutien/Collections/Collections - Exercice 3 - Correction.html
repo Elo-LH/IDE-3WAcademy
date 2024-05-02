@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let personnes = [{
+            firstName: 'Georges',
+            lastName: 'Cloney',
+            age: 56,
+            job: 'acteur'
+        },{
+            firstName: 'Julien',
+            lastName: 'Dupont',
+            age: 102,
+            job: 'cireur'
+        },{
+            firstName: 'Jules',
+            lastName: 'César',
+            age: 1563,
+            job: 'empereur'
+        },{
+            firstName: 'Robert',
+            lastName: 'Redford',
+            age: 78,
+            job: 'acteur'
+        }];
+
+        // Création du tableau HTML
+        const tableElement = document.createElement('table');
+        document.body.appendChild(tableElement);
+
+        // Création de la ligne d'entêtes des colonnes
+        const theaderRow = document.createElement('tr');
+        tableElement.appendChild(theaderRow);
+    
+        theaderRow.innerHTML = `
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+            <th>Job</th>
+        `;
+
+        // Méthode 2
+        // const ths = Object.keys(personnes[0]).map((key) => `<th>${key}</th>`);
+        // theaderRow.innerHTML = ths.join('');
+
+        // Création des lignes de données
+        personnes.forEach((personne) => {
+            const tdataRow = document.createElement('tr');
+            tableElement.appendChild(tdataRow);
+            tdataRow.innerHTML = `
+                <td>${personne.firstName}</td>
+                <td>${personne.lastName}</td>
+                <td>${personne.age}</td>
+                <td>${personne.job}</td>
+            `;
+        });
+    </script>
+</body>
+</html>

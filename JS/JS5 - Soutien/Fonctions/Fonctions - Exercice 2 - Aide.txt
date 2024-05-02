@@ -1,0 +1,12 @@
+
+1. Ecrire une fonction createButton qui prend en paramètre une chaine de
+caractères "label" et qui retourne un élément HTML de type <button>
+avec le contenu de "label" à l'intérieur.
+
+2. Ecrire une seconde fonction createToolBar qui prend en paramètre une
+collection "tools" et qui, pour chaque propriété "color", va
+- créer un bouton en appelant la fonction createButton avec color
+- ajouter le bouton à l'élément "js-board"
+
+3. Au clic sur le bouton js-button, appeler la fonction createToolBar
+en lui passant la collection suivante
