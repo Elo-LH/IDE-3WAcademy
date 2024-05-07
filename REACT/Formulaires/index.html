@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello React</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <!-- babel => compilation du JSX -->
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      const Header = (props) => {
+        const { logoSrc, siteTitle } = props
+
+        return (
+          <header>
+            <img src={logoSrc} />
+            <h1>{siteTitle}</h1>
+          </header>
+        )
+      }
+      const Footer = (props) => {
+        const { copyright } = props
+
+        return (
+          <footer>
+            <p>{copyright}</p>
+          </footer>
+        )
+      }
+      const ContactForm = () => {
+        /*
+                Exercice : Au clic sur le bouton de soumission du formulaire,
+                afficher les données des champs dans la console, sans utiliser querySelector.
+                Utiliser les state à la place.
+
+                -> IMPORTANT : Regarder le cours elearning : https://elearning.3wa.fr/mod/page/view.php?id=22222
+            */
+
+        const [values, setValue] = React.useState({})
+
+        const handleChange = ({ target: { name, value } }) => {
+          setValue({ ...values, [name]: value })
+        }
+
+        const handleSubmit = (event) => {
+          console.log(`lastName: ${values.lastName}`)
+          console.log(`firstName: ${values.firstName}`)
+          console.log(`age: ${values.age}`)
+          console.log(`email: ${values.email}`)
+          console.log(`phone: ${values.phone}`)
+          console.log(`message: ${values.message}`)
+
+          event.preventDefault()
+          
+        }
+
+        return (
+          <form onSubmit={handleSubmit}>
+            <label htmlFor="lastNameId">Nom</label>
+            <input
+              onChange={handleChange}
+              type="text"
+              name="lastName"
+              id="lastNameId"
+            />
+
+            <label htmlFor="firstNameId">Prénom</label>
+            <input
+              onChange={handleChange}
+              type="text"
+              name="firstName"
+              id="firstNameId"
+            />
+
+            <label htmlFor="ageId">Age</label>
+            <input
+              onChange={handleChange}
+              type="number"
+              min="0"
+              name="age"
+              id="ageId"
+            />
+
+            <label htmlFor="emailId">Email</label>
+            <input
+              onChange={handleChange}
+              type="email"
+              name="email"
+              id="emailId"
+            />
+
+            <label htmlFor="phoneId">Téléphone</label>
+            <input
+              onChange={handleChange}
+              type="phone"
+              name="phone"
+              id="phoneId"
+            />
+
+            <label htmlFor="messageId">Message</label>
+            <textarea
+              onChange={handleChange}
+              name="message"
+              id="messageId"
+            ></textarea>
+
+            <button>Envoyer</button>
+          </form>
+        )
+      }
+      const App = () => {
+        return (
+          <React.Fragment>
+            <Header logoSrc="logo.png" siteTitle="Un joli site" />
+            <ContactForm />
+            <Footer copyright="Nevezide" />
+          </React.Fragment>
+        )
+      }
+
+      ReactDOM.render(<App />, document.getElementById("root"))
+    </script>
+  </body>
+</html>
