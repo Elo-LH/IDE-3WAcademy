@@ -10,6 +10,7 @@ const ContactTable = ({ contacts, onEditContact, onDeleteContact }) => {
             <th>Fisrt Name</th>
             <th>Phone Number</th>
             <th>Email adress</th>
+            <th>Birthday</th>
             <th>Actions</th>
           </tr>
         </thead>

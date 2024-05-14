@@ -56,6 +56,15 @@ const Form = ({ state, dispatch, handleNewContact }) => {
         onChange={handleChange}
       />
 
+      <label htmlFor="birthdayId">Birthday</label>
+      <input
+        type="date"
+        name="birthday"
+        id="birthdayId"
+        value={state.birthday}
+        onChange={handleChange}
+      />
+
       <button>Save Contact</button>
     </form>
   )

@@ -26,6 +26,7 @@ const reducer = (state, action) => {
           firstName: '',
           phone: 0,
           email: '',
+          birthday: '',
         },
       }
     case 'edit':
@@ -76,6 +77,7 @@ const App = () => {
       firstName: '',
       phone: 0,
       email: '',
+      birthday: '',
     },
   })
 
