@@ -10,6 +10,7 @@ const Form = ({ state, dispatch, handleNewContact }) => {
 
     if (state.id > 0) {
       dispatch({ type: 'update', contact: state })
+      dispatch({ type: 'new' })
       return
     }
 
@@ -55,7 +56,7 @@ const Form = ({ state, dispatch, handleNewContact }) => {
         onChange={handleChange}
       />
 
-      <button>Add contact</button>
+      <button>Save Contact</button>
     </form>
   )
 }

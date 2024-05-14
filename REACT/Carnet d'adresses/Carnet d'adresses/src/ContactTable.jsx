@@ -1,6 +1,6 @@
 import ContactRow from './ContactRow.jsx'
 
-const ContactTable = ({ contacts, onEditContact }) => {
+const ContactTable = ({ contacts, onEditContact, onDeleteContact }) => {
   return (
     <>
       <table>
@@ -10,6 +10,7 @@ const ContactTable = ({ contacts, onEditContact }) => {
             <th>Fisrt Name</th>
             <th>Phone Number</th>
             <th>Email adress</th>
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -18,6 +19,7 @@ const ContactTable = ({ contacts, onEditContact }) => {
               contact={contact}
               key={i}
               onEditContact={onEditContact}
+              onDeleteContact={onDeleteContact}
             />
           ))}
         </tbody>

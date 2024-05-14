@@ -51,6 +51,20 @@ const reducer = (state, action) => {
         contacts: [...contacts],
       }
     }
+    case 'delete': {
+      const contacts = [...state.contacts]
+      const indexToUpdate = state.contacts.findIndex(
+        (elt) => elt.id === action.contact.id
+      )
+      console.log(contacts)
+      contacts.splice(indexToUpdate, 1)
+      console.log(contacts)
+
+      return {
+        ...state,
+        contacts: [...contacts],
+      }
+    }
   }
 }
 
@@ -79,8 +93,12 @@ const App = () => {
   }
 
   const handleEditContact = (contact) => {
-    console.log(contact)
+    console.log(state)
     dispatch({ type: 'edit', contact })
+  }
+  const handleDeleteContact = (contact) => {
+    console.log(state)
+    dispatch({ type: 'delete', contact })
   }
 
   return (
@@ -93,6 +111,7 @@ const App = () => {
       <ContactTable
         contacts={state.contacts}
         onEditContact={handleEditContact}
+        onDeleteContact={handleDeleteContact}
       />
     </>
   )
