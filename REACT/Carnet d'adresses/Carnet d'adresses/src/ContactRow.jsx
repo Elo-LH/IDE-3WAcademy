@@ -24,8 +24,8 @@ const ContactRow = ({ contact, key, onEditContact, onDeleteContact }) => {
       <td>
         {contact.birthday}
 
-        {isBirthdayToday(contact.birthday) && '🎉 Happy '}
-        {calculateAge(contact.birthday)}
+        {isBirthdayToday(contact.birthday) &&
+          '🎉 Happy ' + calculateAge(contact.birthday)}
       </td>
 
       <td>

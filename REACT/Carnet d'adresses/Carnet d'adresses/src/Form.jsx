@@ -1,3 +1,15 @@
+const formatLastName = (lastName) => {
+  return lastName.toUpperCase()
+}
+
+const formatFirstName = (firstName) => {
+  firstName = firstName.toLowerCase()
+  return firstName.charAt(0).toUpperCase() + firstName.slice(1)
+}
+const formatPhoneNumber = (phone) => {
+  return phone.replace(/(.{2})/g, '$1 ')
+}
+
 const Form = ({ state, dispatch, handleNewContact }) => {
   const handleChange = (event) => {
     const { value, name } = event.target
@@ -7,6 +19,12 @@ const Form = ({ state, dispatch, handleNewContact }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault()
+    console.log('stateis', state)
+    // Formatting Inputs
+    state.lastName = formatLastName(state.lastName)
+    state.firstName = formatFirstName(state.firstName)
+    state.phone = formatPhoneNumber(state.phone)
+    // End of formatting Inputs
 
     if (state.id > 0) {
       dispatch({ type: 'update', contact: state })
