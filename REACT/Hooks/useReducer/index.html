@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Hello React</title>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <!-- babel => compilation du JSX -->
+    <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+/* Un reducer prend TOUJOURS 2 paramètres :
+  - state : le state actuel
+  - action : l'action à exécuter
+
+  Et retourne le nouveau state COMPLET !
+*/
+const reducer = (state, action) => {
+    switch (action.type) {
+        case 'increment':
+            return {
+                ...state,
+                count: state.count + 1
+            }
+        case 'decrement':
+            return {
+                ...state,
+                count: state.count - 1
+            }
+        default:
+            return state;
+    }
+}
+
+function Counter() {
+    const [state, dispatch] = React.useReducer(reducer, {count: 0});
+
+    return (
+        <React.Fragment>
+            <p>Counter: {state.count}</p>
+            <button onClick={() => dispatch({type: 'increment'})}>+</button>
+            <button onClick={() => dispatch({type: 'decrement'})}>-</button>
+        </React.Fragment>
+    );
+}
+
+function Counter2() {
+    const [state, dispatch] = React.useReducer(reducer, {count: 0});
+
+    return (
+        <React.Fragment>
+            <p>Counter: {state.count}</p>
+            <button onClick={() => dispatch({type: 'increment'})}>+</button>
+            <button onClick={() => dispatch({type: 'decrement'})}>-</button>
+        </React.Fragment>
+    );
+}
+ReactDOM.render(
+    <React.Fragment>
+        <Counter />
+        <Counter2 />
+    </React.Fragment>,
+    document.getElementById('root')
+);
+    </script>
+</body>
+</html>
